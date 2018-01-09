@@ -24,13 +24,13 @@
     </div>
     <div class="col-xl-6">
       <form>
-        <input type="text" name="name" placeholder="Navn" required>
+        <input type="text" class="form-control" name="name" placeholder="Navn" required>
         <br>
-        <input type="text" name="mail" placeholder="E-Mail" required>
+        <input type="text" class="form-control" name="mail" placeholder="E-Mail" required>
         <br>
-        <textarea></textarea>
-        <br><br>
-        <input type="submit" value="Send">
+        <textarea class="form-control" placeholder="Indtast bedsked her..." rows="4"></textarea>
+        <br>
+        <input type="submit" class="btn" value="Send">
       </form>
 
     </div>
