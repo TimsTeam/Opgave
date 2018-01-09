@@ -1,6 +1,7 @@
 <?php
 // Include config file
 include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
+session_start();
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -48,9 +49,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         if(password_verify($password, $hashed_password)){
                             /* Password is correct, so start a new session and
                             save the username to the session */
-                            if (session_status() == PHP_SESSION_NONE) {
-                                session_start();
-                            }
                             $_SESSION['username'] = $username;      
                             header("location: admin/frontpage.php");
                         } else{
