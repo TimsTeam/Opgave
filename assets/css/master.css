@@ -2,3 +2,11 @@
 margin-left: 40px;
 
 }
+.banner{
+    padding: 0em;
+    /* height: 350px; */
+}
+.banner img{
+    width: 100vw;
+    height: 30vh;
+}
