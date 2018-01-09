@@ -13,19 +13,20 @@
     <!-- multiple icons for IE -->
     <meta name="msapplication-square310x310logo" content="icon_largetile.png">
     <meta name="description" content="">
-
-    <title>INSERT TITLE HERE</title>
+    <meta name="author" content="Timsteam">
+    <title><?php $pagetitle ?> | Footsteps</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,600" rel="stylesheet">
 </head>
 
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.php"></a>
+        <a class="navbar-brand" href="index.php"><b>FOOT</b>steps</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -35,10 +36,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Forside</a>
+                    <a class="nav-link" href="index.php">Forside</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Side</a>
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Side</a>

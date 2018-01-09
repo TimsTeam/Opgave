@@ -4,7 +4,12 @@
     background-color: #000;
     color: #fff;
 }
-
+.navbar-brand {
+    font-family: 'Proza Libre', sans-serif;
+}
+[type="submit"] {
+    display: block;
+}
 /*#region ANIMATED ICON BAR*/
 .navbar-toggler {
     border:none;
