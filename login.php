@@ -2,11 +2,6 @@
 include $_SERVER["DOCUMENT_ROOT"]."/incl/header.php";
 include $_SERVER["DOCUMENT_ROOT"]."/incl/login.inc.php";
 
-if (isset($_SESSION['username'])) : 
-  header("Location: admin/frontpage.php");
-endif; 
-
-if (!isset($_SESSION['username'])) : 
 $pageTitle = "Admin Login";
 ?>
 <section class="form-wrapper container">
@@ -29,7 +24,4 @@ $pageTitle = "Admin Login";
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
 </section>
-<?php 
-endif; 
-?>
 <?php include $_SERVER["DOCUMENT_ROOT"]."/incl/footer.php";?>
