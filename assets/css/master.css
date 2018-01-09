@@ -25,3 +25,24 @@ footer p {
     bottom: 5px;
     right: 50px;
 }
+
+.input-os input, .input-os textarea  {
+  border: none;
+  border-radius: 5px;
+  background-color: #E8E8E8;
+  margin-bottom: 15px;
+  width: 100%;
+  resize: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.input-os textarea {
+  height: 150px;
+}
+
+.input-os input:last-child {
+  float:right;
+  width: auto;
+}

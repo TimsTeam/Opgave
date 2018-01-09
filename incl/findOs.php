@@ -23,13 +23,13 @@
       <h5>footsteps@foot.dk</h5>
     </div>
     <div class="col-xl-6">
-      <form>
-        <input type="text" name="name" placeholder="Navn" required>
+      <form class="input-os">
+        <input type="text" name="name" placeholder=" Navn" required>
         <br>
-        <input type="text" name="mail" placeholder="E-Mail" required>
+        <input type="text" name="mail" placeholder=" E-Mail" required>
         <br>
-        <textarea></textarea>
-        <br><br>
+        <textarea placeholder=" Besked"></textarea>
+        <br>
         <input type="submit" value="Send">
       </form>
 
