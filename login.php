@@ -1,6 +1,6 @@
 <?php
-include $_SERVER["DOCUMENT_ROOT"]."/incl/header.php";
 include $_SERVER["DOCUMENT_ROOT"]."/incl/login.inc.php";
+include $_SERVER["DOCUMENT_ROOT"]."/incl/header.php";
 
 $pageTitle = "Admin Login";
 ?>
