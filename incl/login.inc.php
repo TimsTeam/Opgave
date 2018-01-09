@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Include config file
 include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
  
@@ -71,4 +72,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Close connection
     mysqli_close($dbConnect);
-}
+} ?>
