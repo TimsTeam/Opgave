@@ -17,22 +17,11 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/admin-header.inc.php";
                     <label for="link">Beskrivelse</label>
                     <textarea class="form-control" name="desc" cols="52" rows="4" placeholder="Beskrivelse her..."></textarea>
                 </div>
-                <div class="form-group">
+                <div class="form-group input_fields_wrap">
                     <label>Farve(r)</label><br>
                     <input type="text">
 	                <input type="color" name="colorhex" id="cpButton" value="#ccc1d9" />
-                </div>
-                <div class="form-group">
-                    <label for="price">Pris</label>
-                    <input class="form-control" type="text" name="price" placeholder="Ex. 150">
-                </div>
-                <div class="form-group">
-                    <label for="units">Antal</label>
-                    <input class="form-control" type="text" name="units" placeholder="Ex. 2">
-                </div>
-                <div class="form-group">
-                    <label class="file-upload" for="file"><i class="fa fa-upload" aria-hidden="true"></i> Upload Billede</label>
-                    <input style="position:absolute;left: -99999px" class="form-control-file" type="file" name="file" id="file" accept="image/*">
+	                <button type="button" class="add_color_button">Tilføj farve</button>
                 </div>
                 <button class="btn btn-primary" type="submit" name="submit">Opret</button>
             </form>
@@ -45,8 +34,8 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/admin-header.inc.php";
                     <span class="table-add glyphicon glyphicon-plus"></span>
                     <table class="table">
                         <?php
-                        $sql = "SELECT * FROM products ORDER BY product_id ASC";
-                        $result = $conn->query($sql);
+                        $sql = "SELECT * FROM shoes ORDER BY id ASC";
+                        $result = $dbConnect->query($sql);
                         ?>
                         <tr>
                             <th>No.</th>
@@ -116,7 +105,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/admin-header.inc.php";
         </div>
     </section>
 
-    <?php $conn->close(); ?>
+    <?php $dbConnect->close(); ?>
 
 <?php elseif (empty($_SESSION)) : ?>
     <?= header("Location: ../login.php") ?>
