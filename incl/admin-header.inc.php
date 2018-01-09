@@ -34,7 +34,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 
   <header class="header__admin">
     <!-- If logged in -->
-    <?php if (isset($_SESSION['u_id'])) : ?>
+    <?php if (isset($_SESSION['username'])) : ?>
       <ul class="ml-auto">
         <li><a href="frontpage.php">Forside</a></li>
         <li><a href="blog.php">Blog</a></li>
