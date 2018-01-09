@@ -1,8 +1,8 @@
 <section class="container">
   <center>
     <h1>Nye Produkter</h1>
-    <div class="row justify-content-xl-center nyCard">
-      <div class="card col-xl-3" style="width: 20rem;">
+    <div class="row">
+      <div class="card col-xl-3 mx-auto" style="width: 20rem;">
         <img class="card-img-top" src="/yzy.jpg" alt="Card image cap">
         <div class="card-block">
           <h4 class="card-title">Card title</h4>
@@ -10,7 +10,7 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-      <div class="card col-xl-3" style="width: 20rem;">
+      <div class="card col-xl-3 mx-auto" style="width: 20rem;">
         <img class="card-img-top" src="/yzy.jpg" alt="Card image cap">
         <div class="card-block">
           <h4 class="card-title">Card title</h4>
@@ -18,7 +18,7 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-      <div class="card col-xl-3" style="width: 20rem;">
+      <div class="card col-xl-3 mx-auto" style="width: 20rem;">
         <img class="card-img-top" src="/yzy.jpg" alt="Card image cap">
         <div class="card-block">
           <h4 class="card-title">Card title</h4>
