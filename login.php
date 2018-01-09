@@ -6,7 +6,6 @@ $pageTitle = "Admin Login";
 ?>
 <section class="form-wrapper container">
   <h1>Log ind</h1>
-<!--  <form class="form-main" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">-->
    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username:<sup>*</sup></label>
