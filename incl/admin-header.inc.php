@@ -36,7 +36,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">&nbspFjern</a></div>'); //add input box
         }
     });
     
@@ -45,7 +45,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     })
 });</script>
   </head>
-
+  <body>
   <header class="header__admin">
     <!-- If logged in -->
     <?php if (isset($_SESSION['username'])) : ?>
@@ -56,6 +56,4 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
       </ul>
     <?php endif; ?>
   </header>
-  
 
-  <body>
