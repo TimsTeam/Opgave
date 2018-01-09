@@ -3,12 +3,10 @@ margin-left: 40px;
 
 }
 .banner{
-    padding: 0em;
-    /* height: 350px; */
+    padding: 0;
 }
 .banner img{
     width: 100vw;
-    height: 30vh;
 }
 footer {
     position: relative;
