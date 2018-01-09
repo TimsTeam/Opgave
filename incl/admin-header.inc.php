@@ -8,7 +8,6 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 ?>
 <!DOCTYPE html>
 <html lang="da">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,10 +19,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/main.css">
-
     <!-- Scripts -->
-    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!-- PopperJS -->
@@ -37,7 +33,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     <?php if (isset($_SESSION['username'])) : ?>
       <ul class="ml-auto">
         <li><a href="frontpage.php">Forside</a></li>
-        <li><a href="blog.php">Blog</a></li>
+        <li><a href="shoes.php">Sko</a></li>
         <li><a href="../incl/logout.inc.php">Log ud</a></li>
       </ul>
     <?php endif; ?>
