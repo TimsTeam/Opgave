@@ -1,7 +1,10 @@
 <?php
 session_start();
 require $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
-
+if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+  header("location: login.php");
+  exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="da">
@@ -39,5 +42,6 @@ require $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
       </ul>
     <?php endif; ?>
   </header>
+  
 
   <body class="white">
