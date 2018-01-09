@@ -39,6 +39,7 @@ if(isset($_POST["submit"])){
 }
 ?>
     <div class="container">
+       <h1>Register</h1>
         <form method="POST" action="register.php">
             <div class="form-group">
                 <label for="inputUsername">Username</label>
