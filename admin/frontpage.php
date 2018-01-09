@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Admin | Projekt Afrika";
+$pageTitle = "Admin | Footsteps";
 include '../incl/admin-header.inc.php';
 ?>
 
@@ -8,3 +8,9 @@ include '../incl/admin-header.inc.php';
 <?php elseif (empty($_SESSION)) : ?>
     <?= header("Location: ../login.php") ?>
 <?php endif; ?>
+
+
+
+
+</body>
+</html>
