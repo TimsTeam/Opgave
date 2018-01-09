@@ -21,7 +21,8 @@ $pageTitle = "Admin Login";
       <label for="pwd">Password</label>
       <input type="password" class="form-control" name="password" id="password" placeholder="Password">
     </div>
-    <button type="submit" class="btn btn-primary ml-auto" name="button">Log ind</button>
+    <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+      <button type="submit" class="btn btn-primary ml-auto" name="button">Log ind</button>
     <span class="text-danger"><?php echo $loginErr ?></span>
   </form>
 </section>
