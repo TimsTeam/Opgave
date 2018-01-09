@@ -11,7 +11,7 @@
     } else {
     echo ('<figure class="container-fluid banner">');
     if($row = mysqli_fetch_assoc($bannerQuery)){
-        echo ('<img src="assets/images/' . $row["bannerName"] . '" class="img-fluid" >');
+        echo ('<img src="assets/images/' . $row["bannerName"] . '" class="img-fluid">');
     } else {
         echo "Something went wrong, no banner file found";
     }
