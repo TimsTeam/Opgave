@@ -23,25 +23,14 @@
       <h5>footsteps@foot.dk</h5>
     </div>
     <div class="col-xl-6">
-<<<<<<< HEAD
       <form class="input-os">
         <input type="text" name="name" placeholder=" Navn" required>
         <br>
         <input type="text" name="mail" placeholder=" E-Mail" required>
         <br>
-        <textarea placeholder=" Besked"></textarea>
+        <textarea placeholder=" Besked" required></textarea>
         <br>
         <input type="submit" value="Send">
-=======
-      <form>
-        <input type="text" class="form-control" name="name" placeholder="Navn" required>
-        <br>
-        <input type="text" class="form-control" name="mail" placeholder="E-Mail" required>
-        <br>
-        <textarea class="form-control" placeholder="Indtast bedsked her..." rows="4"></textarea>
-        <br>
-        <input type="submit" class="btn" value="Send">
->>>>>>> 83e6154dbd5bad31d38c8206d43231b179649f99
       </form>
 
     </div>
