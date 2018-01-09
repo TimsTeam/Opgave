@@ -5,7 +5,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/admin-header.inc.php";
 
 <?php if (!empty($_SESSION)) : ?>
 
-
     <section class="container">
         <div class="form-wrapper">
             <h1>nyt produkt</h1>
@@ -18,10 +17,10 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/admin-header.inc.php";
                     <label for="link">Beskrivelse</label>
                     <textarea class="form-control" name="desc" cols="52" rows="4" placeholder="Beskrivelse her..."></textarea>
                 </div>
-                
-                <div class="form-group demoPanel ui-widget ui-widget-content ui-corner-all">
+                <div class="form-group">
                     <label>Farve(r)</label><br>
-                    <input type="color" value="#ff0000" id="colorWell">
+                    <input type="text">
+	                <input type="color" name="colorhex" id="cpButton" value="#ccc1d9" />
                 </div>
                 <div class="form-group">
                     <label for="price">Pris</label>
@@ -122,119 +121,3 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/admin-header.inc.php";
 <?php elseif (empty($_SESSION)) : ?>
     <?= header("Location: ../login.php") ?>
 <?php endif; ?>
-
-<script>
-
-$(document).ready(function(){
-
-	// Change theme
-    $('.css').on('click', function(evt){
-        var theme=this.innerHTML.toLowerCase().replace(' ', '-'),
-            url='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/'+theme+'/jquery-ui.css';
-        $('#jquiCSS').attr('href', url);
-        $('.css').removeClass('sel');
-        $(this).addClass('sel');
-    });
-	
-	// Events demo
-	function setColor(evt, color){
-        if(color){
-            $('#cpEvent').css('background-color', color);
-        }
-	}
-
-	$('#cpBinding').colorpicker({
-		color:'#ebf1dd',
-		initialHistory: ['#ff0000','#000000','red', 'purple']
-	})
-		.on('change.color', setColor)
-		.on('mouseover.color', setColor);
-	
-	// Methods demo
-	$('#getVal').on('click', function(){
-		alert('Selected color = "' + $('#cp1').colorpicker("val") + '"');
-	});
-	$('#setVal').on('click', function(){
-		$('#cp1').colorpicker("val",'#31859b');
-	});
-	$('#enable').on('click', function(){
-		$('#cp1').colorpicker("enable");
-	});
-	$('#disable').on('click', function(){
-		$('#cp1').colorpicker("disable");
-	});
-	$('#clear').on('click', function(){
-		$('#cp1').colorpicker("clear");
-	});
-	$('#destroy1').on('click', function(){
-		$('#cp1').colorpicker("destroy");
-	});
-	// Methods demo 2 (inline colorpicker)
-	$('#getVal2').on('click', function(){
-		alert('Selected color = "' + $('#cpInline').colorpicker("val") + '"');
-	});
-	$('#setVal2').on('click', function(){
-		$('#cpInline').colorpicker("val", '#31859b');
-	});
-	$('#enable2').on('click', function(){
-		$('#cpInline').colorpicker("enable");
-	});
-	$('#disable2').on('click', function(){
-		$('#cpInline').colorpicker("disable");
-	});
-	$('#destroy2').on('click', function(){
-		$('#cpInline').colorpicker("destroy");
-	});
-	
-	// Instanciate colorpickers
-	$('#cp1').colorpicker({
-		color:'#ff9800',
-		initialHistory: ['#ff0000','#000000','red', 'purple']
-	})
-	$('#cpBinding').colorpicker({
-		color:'#ebf1dd'
-	})
-    $('#cpInline').colorpicker({color:'#92cddc'});
-    $('#cpInline2').colorpicker({color:'#92cddc', defaultPalette:'web'});
-
-	// Custom theme palette
-	$('#customTheme').colorpicker({
-		color: '#f44336',
-		customTheme: ['#f44336','#ff9800','#ffc107','#4caf50','#00bcd4','#3f51b5','#9c27b0', 'white', 'black']
-	});
-    $('#cpButton').colorpicker({showOn:'button'});
-    $('#cpFocus').colorpicker({showOn:'focus'});
-    $('#cpBoth').colorpicker();
-    $('#cpOther').colorpicker({showOn:'none'});
-
-	$('#show').on('click', function(evt){
-		evt.stopImmediatePropagation();
-		$('#cpOther').colorpicker("showPalette");
-	});
-	
-	// With transparent color
-	$('#transColor').colorpicker({
-		transparentColor: true
-	});
-
-	// With hidden button
-	$('#hideButton').colorpicker({
-		hideButton: true
-	});
-
-	// No color indicator
-	$('#noIndColor').colorpicker({
-		displayIndicator: false
-	});
-
-	// French colorpicker
-	$('#frenchColor').colorpicker({
-		strings: "Couleurs de themes,Couleurs de base,Plus de couleurs,Moins de couleurs,Palette,Historique,Pas encore d'historique."
-	});
-
-	// Fix links
-	$('a[href="#"]').attr('href', 'javascript:void(0)');
-
-});
-
-</script>
