@@ -1,25 +1,24 @@
-<footer class="container-fluid">
-       <hr>
-        <div class="row">
-            <p class="col-xs-12 col-md-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis nunc non metus sagittis dapibus. Proin at consectetur quam, nec tincidunt turpis. Nam faucibus arcu nec quam rutrum, vitae placerat velit molestie. Duis eget mi sed mauris fringilla varius et nec urna. Pellentesque auctor sodales tortor vitae viverra.</p>
-            <div class="col-xs-12 col-md-3">
-                <ul>
-                    <li><a href="">Link</a></li>
-                    <li><a href="">Link</a></li>
-                    <li><a href="">Link</a></li>
-                    <li><a href="">Link</a></li>
-                </ul>
+
+<hr>
+<footer class="container">
+
+        <div class="row" >
+            <div class="col-xl-6">
+                <p>Adresse:</p>
+                <p>Øster Uttrup vej 1, 9000 Aalborg</p>
+                <br>
+                <p>Tlf:</p>
+                <p>88888888</p>
+                <br>
+                <p>Mail:</p>
+                <p>footsteps@foot.dk</p>
             </div>
-            <div class="col-xs-12 col-md-3">
-                <ul>
-                    <li><a href="">Link</a></li>
-                    <li><a href="">Link</a></li>
-                    <li><a href="">Link</a></li>
-                    <li><a href="">Link</a></li>
-                </ul>
+                <div class="col-xl-6">
+                    <p>Find os her</p>
+                    <a href=""><img src="assets/img/facebook_logo.svg" alt="Pis" style="width: 30px;"> </a>
+                    <a href=""><img src="assets/img/instagram_logo.svg" alt="Pis" style="width: 30px;"> </a>
             </div>
         </div>
-        <div class="sFooter row">Supfooter</div>
 </footer>
 
 
