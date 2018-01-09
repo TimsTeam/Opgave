@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'dbh.inc.php';
+require $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ require 'dbh.inc.php';
       <ul class="ml-auto">
         <li><a href="frontpage.php">Forside</a></li>
         <li><a href="blog.php">Blog</a></li>
-        <li><a href="../includes/logout.inc.php">Log ud</a></li>
+        <li><a href="../incl/logout.inc.php">Log ud</a></li>
       </ul>
     <?php endif; ?>
   </header>
