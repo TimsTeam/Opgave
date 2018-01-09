@@ -60,11 +60,12 @@ if (isset($_POST["uploadImage"])) {
 }
 ?>
 
-
-    <form method="POST" action="" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="imgFile">Upload image</label>
-            <input type="file" name="imgFile" class="form-control-file" id="imgFile">
-            <button type="submit" name="uploadImage" class="btn btn-primary">Upload</button>
-        </div>
-    </form>
+    <section class="container">
+        <form method="POST" action="" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="imgFile">Upload image</label>
+                <input type="file" name="imgFile" class="form-control-file" id="imgFile">
+                <button type="submit" name="uploadImage" class="btn btn-primary">Upload</button>
+            </div>
+        </form>
+    </section>

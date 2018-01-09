@@ -1,6 +1,7 @@
 <?php
 $pageTitle = "Admin | Footsteps";
 include '../incl/admin-header.inc.php';
+include '../incl/dbInfo.php';
 ?>
 
 <?php if (!empty($_SESSION)) : ?>
@@ -9,6 +10,7 @@ include '../incl/admin-header.inc.php';
     <?= header("Location: ../login.php") ?>
 <?php endif; ?>
 
+<?php include('../incl/bannerUpload.php') ?>
 
 
 
