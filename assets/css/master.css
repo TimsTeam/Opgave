@@ -50,3 +50,21 @@ footer p {
   float:right;
   width: auto;
 }
+
+.skoFix {
+  margin-top: 100px;
+}
+
+.skoBox {
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  }
+
+  .skoBox2 {
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  padding: 3px 15px 3px 15px;
+  text-align: center;
+}

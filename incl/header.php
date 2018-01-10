@@ -42,7 +42,7 @@
                     <a class="nav-link" href="login.php">Herre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mærker</a>
+                    <a class="nav-link" href="sko.php">Mærker</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Nyheder</a>
