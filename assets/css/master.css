@@ -68,3 +68,54 @@ footer p {
   padding: 3px 15px 3px 15px;
   text-align: center;
 }
+
+.colorbox {
+  margin-top: 15px;
+  width: 38px;
+  height: 29px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.color-green {
+  background-color: #219653;
+}
+
+.color-red {
+  background-color: #EB5757;
+}
+
+.color-yellow {
+  background-color: #F2C94C;
+}
+
+.color-white {
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+}
+
+.color-blue {
+  background-color: #2F80ED;
+}
+
+.color-purple {
+  background-color: #9B51E0;
+}
+
+.color-orange {
+  background-color: #F2994A;
+}
+
+.color-black {
+  background-color: #333333;
+}
+
+.color-teal {
+  background-color: #56CCF2;
+}
+
+.mrkFix label {
+  display: block;
+}
