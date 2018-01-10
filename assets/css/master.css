@@ -25,6 +25,10 @@ footer p {
     bottom: 5px;
     right: 50px;
 }
+.np {
+  margin-top: 50px;
+}
+
 
 .input-os input, .input-os textarea  {
   border: none;
