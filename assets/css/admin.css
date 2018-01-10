@@ -1,0 +1,20 @@
+.header__admin ul li{
+    display: inline-block;
+}
+.bannerUpload{
+    /* border: 1px solid black; */
+}
+
+.table{
+    text-align: center;
+}
+
+.table th{
+    font-size: 12px;
+}
+.table img{
+    width: 100%;
+}
+.table button{
+    width: 100%;
+}
