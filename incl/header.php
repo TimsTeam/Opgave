@@ -14,7 +14,7 @@
     <meta name="msapplication-square310x310logo" content="icon_largetile.png">
     <meta name="description" content="">
     <meta name="author" content="Timsteam">
-    <title><?php $pagetitle ?> | Footsteps</title>
+    <title><?php $pagetitle ?>Footsteps</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -46,7 +46,7 @@
                     <a class="nav-link" href="sko.php">Mærker</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.php">Nyheder</a>
+                    <a class="nav-link" href="blog.php">Blog</a>
                 </li>
             </ul>
         </div>
