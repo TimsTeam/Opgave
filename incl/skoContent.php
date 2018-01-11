@@ -4,6 +4,7 @@
   <div class="col-xl-2 skoBox">
     <br />
     <!-- Størrelse -->
+
     <div class="skoBox2">
       <span>Størrelse</span>
     </div>
@@ -13,6 +14,9 @@
           <input class="form-check-input" type="checkbox" value="">
           41
         </label>
+          <ul class="simplefilter">
+              <li class="active" data-filter="all">All</li>
+              <li data-filter="1">Cityscape</li>
       </div>
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
@@ -47,8 +51,8 @@
         </label>
       </div>
       <br />
-      <!-- Farve -->
 
+      <!-- Farve -->
       <div class="skoBox2">
         <span>Farver</span>
       </div>
@@ -91,6 +95,7 @@
         </label>
       </div>
       <br />
+
       <!-- Mærker -->
       <div class="skoBox2">
         <span>Type</span>
@@ -135,7 +140,6 @@
       </div>
     </center>
   </div>
-
   <div class="col-xl-9">
     test
   </div>
