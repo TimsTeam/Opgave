@@ -1,8 +1,18 @@
 
-.filtr-item {
+.filtr-item figure {
+    height: 150px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 .filtr-item img {
-    max-height: 300px;
+    width: auto;
+    padding: 0;
+}
+.filtr-item p {
+    height: 3.5rem;
+    overflow: hidden;
+    font-size: smaller;
 }
 .item-desc {
     background-color: rgba(0,0,0,0.5);
@@ -60,4 +70,10 @@ select {
 .filtr-search {
     padding: 0.5rem;
     text-transform: uppercase;
+}
+
+.sort-btn {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
 }
