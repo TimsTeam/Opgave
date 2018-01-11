@@ -1,5 +1,4 @@
-<section class="container">
-  <center>
+<section class="container center">
     <h1>Nye Produkter</h1>
     <div class="row">
       <div class="card col-xl-3 mx-auto np" style="width: 20rem;">
@@ -28,5 +27,4 @@
         </div>
       </div>
     </div>
-  </center>
 </section>

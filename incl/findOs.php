@@ -11,12 +11,10 @@ if($stmt->execute()){
 // $stmt->close();
 ?>
 <br>
-<section class="container">
-  <center>
+<section class="container center">
     <h2>Finder os her!</h2>
 
     <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJsTYokLYySUYRwtXFxFw5iFA&key=AIzaSyBCWyS8Ui4KnSw6lHZTOsCnOFxspLYp_2Q" allowfullscreen></iframe>
-  </center>
 </section>
 
 <br>

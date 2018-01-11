@@ -96,7 +96,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
             </form>
             </div>
             <div class="col-6">
-            <table class="table table-striped">
+            <table class="table table-striped table-hover">
                         <?php
                         $sql = "SELECT * FROM shoes ORDER BY id DESC";
                         $result = $dbConnect->query($sql);
