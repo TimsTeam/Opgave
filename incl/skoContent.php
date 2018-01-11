@@ -4,6 +4,7 @@
   <div class="col-xl-2 skoBox">
     <br />
     <!-- Størrelse -->
+
     <div class="skoBox2">
       <span>Størrelse</span>
     </div>
@@ -50,8 +51,8 @@
         </label>
       </div>
       <br />
-      <!-- Farve -->
 
+      <!-- Farve -->
       <div class="skoBox2">
         <span>Farver</span>
       </div>
@@ -94,6 +95,7 @@
         </label>
       </div>
       <br />
+
       <!-- Mærker -->
       <div class="skoBox2">
         <span>Type</span>
@@ -138,7 +140,6 @@
       </div>
     </center>
   </div>
-
   <div class="col-xl-9">
     test
   </div>
