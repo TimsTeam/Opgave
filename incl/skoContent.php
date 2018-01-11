@@ -1,14 +1,13 @@
 <section class="row skoFix">
 
   <!-- Venstre side (filter) -->
-  <div class="col-xl-2 skoBox">
+  <div class="col-xl-2 skoBox center">
     <br />
     <!-- Størrelse -->
 
     <div class="skoBox2">
       <span>Størrelse</span>
     </div>
-    <center>
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="">
@@ -98,7 +97,7 @@
 
       <!-- Mærker -->
       <div class="skoBox2">
-        <span>Type</span>
+        <span>Mærker</span>
       </div>
       <div class="form-check mrkFix">
         <label class="form-check-label">
@@ -138,7 +137,6 @@
           Ecco
         </label>
       </div>
-    </center>
   </div>
   <div class="col-xl-9">
     test
