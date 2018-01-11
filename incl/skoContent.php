@@ -1,13 +1,19 @@
-<section class="row skoFix">
+<?php 
+include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
+
+
+?>
+  <section class="row skoFix">
 
   <!-- Venstre side (filter) -->
-  <div class="col-xl-2 skoBox center">
+  <div class="col-xl-2 skoBox">
     <br />
     <!-- Størrelse -->
 
     <div class="skoBox2">
       <span>Størrelse</span>
     </div>
+    <center>
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="">
@@ -16,6 +22,7 @@
           <ul class="simplefilter">
               <li class="active" data-filter="all">All</li>
               <li data-filter="1">Cityscape</li>
+          </ul>
       </div>
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
@@ -97,7 +104,7 @@
 
       <!-- Mærker -->
       <div class="skoBox2">
-        <span>Mærker</span>
+        <span>Type</span>
       </div>
       <div class="form-check mrkFix">
         <label class="form-check-label">
@@ -137,6 +144,7 @@
           Ecco
         </label>
       </div>
+    </center>
   </div>
   <div class="col-xl-9">
     test
@@ -202,42 +210,19 @@
         <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
         attribute, which starts from the value 1 and goes up from there -->
         <div class="filtr-container">
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="Busy streets">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">Busy Streets</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 5" data-sort="Luminous night">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">Luminous night</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">city wonders</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="In production">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">in production</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 4" data-sort="Industrial site">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">industrial site</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Peaceful lake">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">peaceful lake</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="City lights">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">city lights</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Dreamhouse">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">dreamhouse</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="Restless machines">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">restless machines</span>
-            </div>
+            <?php
+            $sql = "SELECT * FROM shoes ORDER BY id DESC";
+            $result = $dbConnect->query($sql);
+            ?>
+            <?php while ($row = $result->fetch_assoc()) : ?>
+                <div class="filtr-item col-md-3" data-category="1" data-sort="value">
+                       <img class="img-responsive col" src="<?=$row['imgPath']?>">
+                       <h4 style="margin-top:15px;"><?=$row['name']?></h4>
+                       <p><?=$row['description']?></p>
+                       Farve: <div class="colorBlock" style="background:<?=$row['colorhex']?>;"></div>
+                       <div class="size">Str. <?=$row['size']?></div>
+                </div>
+            <?php endwhile; ?>
         </div>
     </div>
 </div>

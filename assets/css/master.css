@@ -124,3 +124,14 @@ footer p {
 .mrkFix label {
   display: block;
 }
+
+.colorBlock {
+    width:10px;
+    height:10px;
+    display:inline-block;
+}
+
+.size {
+    display: inline-block;
+    float: right;
+}
