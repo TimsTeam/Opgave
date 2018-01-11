@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
 
         if ($fileNew == true) {
                 //Insert the user into the database
-            $sql = "UPDATE `shoes` SET `id`=?,`name`=?,`description`=?,`imgPath`=?,`colorname`=?,`colorhex`=?,`type`=?,`gender`=?,`model`=? WHERE id = $productId";
+            $sql = "UPDATE `shoes` SET `id`=?,`name`=?,`description`=?,`imgPath`=?,`colorname`=?,`colorhex`=?,`type`=?,`gender`=?,`model`=?, `collection`=?, `size`=?, `brand`=? WHERE id = $productId";
                 //Create second prepared statement
             $stmt2 = mysqli_stmt_init($conn);
 
@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
                 exit();
             } else {
                     //Bind parameters to the placeholder
-                mysqli_stmt_bind_param($stmt2, "sssssssss", $productNo, $productTitle, $productPrice, $productUnits, $productCategory, $fileDestinationLargeBase, $fileDestinationMediumBase, $fileDestinationSmallBase, $productLink);
+                mysqli_stmt_bind_param($stmt2, "sssssssssss", $shoename, $shoedesc, $fileDestinationBase, $colorname, $colorhex, $shoetype, $shoegender, $shoemodel, $shoecollection, $shoesize, $shoebrand);
 
                     //Run query in database
                 mysqli_stmt_execute($stmt2);
@@ -95,9 +95,9 @@ if (isset($_POST['submit'])) {
 
         } elseif ($fileNew == false) {
             //Insert the user into the database
-            $sql = "UPDATE `products` SET `product_no`=?,`product_title`=?,`product_price`=?,`product_units`=?,`product_category`=?,`product_link`=? WHERE product_id = $productId";
+            $sql = "UPDATE `shoes` SET `id`=?,`name`=?,`description`=?,`imgPath`=?,`colorname`=?,`colorhex`=?,`type`=?,`gender`=?,`model`=?, `collection`=?, `size`=?, `brand`=? WHERE id = $productId";
             //Create second prepared statement
-            $stmt2 = mysqli_stmt_init($conn);
+            $stmt2 = mysqli_stmt_init($dbConnect);
 
             //Check if prepared statement fails
             if (!mysqli_stmt_prepare($stmt2, $sql)) {
@@ -105,7 +105,7 @@ if (isset($_POST['submit'])) {
                 exit();
             } else {
                 //Bind parameters to the placeholder
-                mysqli_stmt_bind_param($stmt2, "ssssss", $productNo, $productTitle, $productPrice, $productUnits, $productCategory, $productLink);
+                mysqli_stmt_bind_param($stmt2, "sssssssssss", $shoename, $shoedesc, $fileDestinationBase, $colorname, $colorhex, $shoetype, $shoegender, $shoemodel, $shoecollection, $shoesize, $shoebrand);
 
                 //Run query in database
                 mysqli_stmt_execute($stmt2);

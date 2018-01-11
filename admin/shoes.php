@@ -20,15 +20,15 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
         $sql6 = "SELECT * FROM model";
         $result6 = $dbConnect->query($sql6);
  ?>
-   
     <section class="container">
-        <div class="form-wrapper">
-            <h1>Nyt produkt</h1>
-            <form action="../incl/uploadShoe.php" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="name">Navn</label>
-                    <input class="form-control" type="text" name="name" placeholder="Sko navn">
-                </div>
+        <div class="row">
+           <div class="col-6">
+           <h1>Nyt produkt</h1>
+           <form action="../incl/uploadShoe.php" method="POST" enctype="multipart/form-data">
+               <div class="form-group">
+                   <label for="name">Navn</label>
+                   <input class="form-control" type="text" name="name" placeholder="Sko navn">
+               </div>
                 <div class="form-group">
                     <label for="link">Beskrivelse</label>
                     <textarea class="form-control" name="description" cols="52" rows="4" placeholder="Beskrivelse her..."></textarea>
@@ -94,9 +94,8 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
                </div>
                <button class="btn btn-primary" type="submit" name="submit">Opret</button>
             </form>
-        </div>
-        
-        <div class="container">
+            </div>
+            <div class="col-6">
             <table class="table table-striped">
                         <?php
                         $sql = "SELECT * FROM shoes ORDER BY id DESC";
@@ -129,9 +128,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
                             </tr>
                         <?php endwhile; ?>
                     </table>
-        </div>
-
-        
+                    </div>
+                    </div>
+</section>    
 
 <?php elseif (empty($_SESSION)) : ?>
     <?= header("Location: ../login.php") ?>
