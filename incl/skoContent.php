@@ -200,7 +200,7 @@
         <input type="text" class="filtr-search" name="filtr-search" data-search>
     </div>
 
-    <div class="row">
+    <div>
         <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
         attribute, which starts from the value 1 and goes up from there -->
         <div class="filtr-container">

@@ -25,11 +25,11 @@ $result6 = $dbConnect->query($sql6);
         </div>
         <div class="form-group">
             <label for="no">Navn</label>
-            <input class="form-control" type="text" name="no" value="<?= $row['name'] ?>">
+            <input class="form-control" type="text" name="name" value="<?= $row['name'] ?>">
         </div>
         <div class="form-group">
             <label for="link">Beskrivelse</label>
-            <input class="form-control" type="text" name="link" value="<?= $row['description'] ?>">
+            <input class="form-control" type="text" name="description" value="<?= $row['description'] ?>">
         </div>
         <div class="form-group input_fields_wrap">
             <label>Farve(r)</label><br>
