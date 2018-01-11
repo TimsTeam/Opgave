@@ -4,10 +4,13 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
 
 ?>
   <section class="row skoFix">
-
   <!-- Venstre side (filter) -->
   <div class="col-xl-2 skoBox">
-    <br />
+  <h6>Sortering:</h6>
+  <div class="row" style="padding: 5px 15px;">
+      <div class="sort-btn col-6 active" data-sortAsc>Nyeste</div>
+      <div class="sort-btn col-6" data-sortDesc>Ældste</div>
+  </div>
     <!-- Størrelse -->
 
     <div class="skoBox2">
@@ -147,7 +150,26 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
     </center>
   </div>
   <div class="col-xl-9">
-    test
+    <div>
+        <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
+        attribute, which starts from the value 1 and goes up from there -->
+        <div class="filtr-container">
+            <?php
+            $sql = "SELECT * FROM shoes ORDER BY id DESC";
+            $result = $dbConnect->query($sql);
+            ?>
+            <?php while ($row = $result->fetch_assoc()) : ?>
+                <div class="filtr-item col-md-3" data-category="1" data-sort="value">
+                       <figure><img class="img-responsive col" src="<?=$row['imgPath']?>"></figure>
+                       <h4 style="margin-top:15px;"><?=$row['name']?></h4>
+                       <p><?=$row['description']?></p>
+                       Farve: <div class="colorBlock" style="background:<?=$row['colorhex']?>;"></div>
+                       <div class="size">Str. <?=$row['size']?></div><br><br>
+                       <div class="btn btn-primary">Læs mere</div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
   </div>
 </section>
 
@@ -180,49 +202,10 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
         </ul>
     </div>
 
-    <!-- Shuffle & Sort Controls -->
-    <div class="row">
-        <ul class="sortandshuffle">
-            Sort &amp; Shuffle controls:
-            <!-- Basic shuffle control -->
-            <li class="shuffle-btn" data-shuffle>Shuffle</li>
-            <!-- Basic sort controls consisting of asc/desc button and a select -->
-            <li class="sort-btn active" data-sortAsc>Asc</li>
-            <li class="sort-btn" data-sortDesc>Desc</li>
-            <select data-sortOrder>
-                <option value="domIndex">
-                    Position
-                </option>
-                <option value="sortData">
-                    Description
-                </option>
-            </select>
-        </ul>
-    </div>
-
     <!-- Search control -->
     <div class="row search-row">
         Search control:
         <input type="text" class="filtr-search" name="filtr-search" data-search>
     </div>
 
-    <div>
-        <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
-        attribute, which starts from the value 1 and goes up from there -->
-        <div class="filtr-container">
-            <?php
-            $sql = "SELECT * FROM shoes ORDER BY id DESC";
-            $result = $dbConnect->query($sql);
-            ?>
-            <?php while ($row = $result->fetch_assoc()) : ?>
-                <div class="filtr-item col-md-3" data-category="1" data-sort="value">
-                       <img class="img-responsive col" src="<?=$row['imgPath']?>">
-                       <h4 style="margin-top:15px;"><?=$row['name']?></h4>
-                       <p><?=$row['description']?></p>
-                       Farve: <div class="colorBlock" style="background:<?=$row['colorhex']?>;"></div>
-                       <div class="size">Str. <?=$row['size']?></div>
-                </div>
-            <?php endwhile; ?>
-        </div>
-    </div>
 </div>
