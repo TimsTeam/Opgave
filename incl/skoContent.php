@@ -13,6 +13,9 @@
           <input class="form-check-input" type="checkbox" value="">
           41
         </label>
+          <ul class="simplefilter">
+              <li class="active" data-filter="all">All</li>
+              <li data-filter="1">Cityscape</li>
       </div>
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
