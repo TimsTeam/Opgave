@@ -30,6 +30,16 @@
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
+<script src="assets/js/jquery-filterizr.js"></script>
+<script src="assets/js/controls.js"></script>
+
+<!-- Kick off Filterizr -->
+<script type="text/javascript">
+    $(function() {
+        //Initialize filterizr with default options
+        $('.filtr-container').filterizr();
+    });
+</script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script>
