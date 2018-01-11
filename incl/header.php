@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="/assets/css/master.css">
     <link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/filter.css">
 </head>
 
 <body class="container">
@@ -45,7 +46,7 @@
                     <a class="nav-link" href="sko.php">Mærker</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nyheder</a>
+                    <a class="nav-link" href="blog.php">Nyheder</a>
                 </li>
             </ul>
         </div>
