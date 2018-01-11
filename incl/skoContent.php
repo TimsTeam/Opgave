@@ -202,24 +202,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
         </ul>
     </div>
 
-    <!-- Shuffle & Sort Controls -->
-    <div class="row">
-        <ul class="sortandshuffle">
-            Sort &amp; Shuffle controls:
-            <!-- Basic shuffle control -->
-            <li class="shuffle-btn" data-shuffle>Shuffle</li>
-            <!-- Basic sort controls consisting of asc/desc button and a select -->
-            <select data-sortOrder>
-                <option value="domIndex">
-                    Position
-                </option>
-                <option value="sortData">
-                    Description
-                </option>
-            </select>
-        </ul>
-    </div>
-
     <!-- Search control -->
     <div class="row search-row">
         Search control:
