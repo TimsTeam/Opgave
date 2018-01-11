@@ -126,6 +126,8 @@ if (isset($_POST["uploadImage"])) {
                         }
                         
                         ?>
+                    </tbody>
+                </table>
             </form>
         </div>
     </section>

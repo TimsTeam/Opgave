@@ -11,6 +11,7 @@ include '../incl/dbInfo.php';
 <?php endif; ?>
 
 <?php include('../incl/bannerUpload.php') ?>
+<?php include('../incl/dynamicText.php') ?>
 
 
 

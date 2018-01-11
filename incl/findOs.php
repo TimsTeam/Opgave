@@ -1,3 +1,15 @@
+<?php
+include("dbInfo.php");
+
+$stmt = $dbConnect->prepare("SELECT adress,phone,email FROM contactadress,contactphone,contactemail");
+
+if($stmt->execute()){
+  $stmt->store_result();
+  $stmt->bind_result($adress, $phone, $email);
+  $stmt->fetch();
+}
+// $stmt->close();
+?>
 <br>
 <section class="container">
   <center>
@@ -14,13 +26,13 @@
     <div class="col-xl-6">
       <!-- Adresse mail osv. -->
       <h4>Adresse:</h4>
-      <h5>Øster Uttrup vej 1, 9000 Aalborg</h5>
+      <h5><?php echo $adress ?></h5>
       <br>
       <h4>Tlf:</h4>
-      <h5>88888888</h5>
+      <h5><?php echo $phone ?></h5>
       <br>
       <h4>Mail:</h4>
-      <h5>footsteps@foot.dk</h5>
+      <h5><?php echo $email ?></h5>
     </div>
     <div class="col-xl-6">
       <form class="input-os">
