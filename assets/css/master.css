@@ -55,7 +55,9 @@ footer p {
 .center {
   text-align: center;
 }
-
+* {
+  transform: rotate(1deg);
+}
 .skoFix {
   margin-top: 100px;
 }
