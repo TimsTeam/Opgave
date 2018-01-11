@@ -7,17 +7,36 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
   <!-- Venstre side (filter) -->
   <div class="col-xl-2 skoBox">
   <br>
-  <h6>Sortering:</h6>
-  <div class="row" style="padding: 5px 15px;">
-      <div class="sort-btn col-6 active" data-sortAsc>Nyeste</div>
-      <div class="sort-btn col-6" data-sortDesc>Ældste</div>
-  </div>
     <!-- Størrelse -->
 
     <div class="skoBox2">
       <span>Størrelse</span>
     </div>
     <center>
+         <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          37
+        </label>
+      </div>
+         <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          38
+        </label>
+      </div>
+         <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          39
+        </label>
+      </div>
+         <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          40
+        </label>
+      </div>
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="">
@@ -30,7 +49,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
           42
         </label>
       </div>
-      <br />
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="">
@@ -43,7 +61,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
           44
         </label>
       </div>
-      <br />
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="">
@@ -56,7 +73,19 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
           46
         </label>
       </div>
-      <br />
+       <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          47
+        </label>
+      </div>
+       <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          48
+        </label>
+      </div>
+
 
       <!-- Farve -->
       <div class="skoBox2">
@@ -100,11 +129,10 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
           Sandaler
         </label>
       </div>
-      <br />
-
+      
       <!-- Mærker -->
       <div class="skoBox2">
-        <span>Type</span>
+        <span>Mærker</span>
       </div>
       <div class="form-check mrkFix">
         <label class="form-check-label">
