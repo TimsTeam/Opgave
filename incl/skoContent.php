@@ -6,6 +6,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
   <section class="row skoFix">
   <!-- Venstre side (filter) -->
   <div class="col-xl-2 skoBox">
+  <br>
   <h6>Sortering:</h6>
   <div class="row" style="padding: 5px 15px;">
       <div class="sort-btn col-6 active" data-sortAsc>Nyeste</div>
@@ -22,10 +23,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
           <input class="form-check-input" type="checkbox" value="">
           41
         </label>
-          <ul class="simplefilter">
-              <li class="active" data-filter="all">All</li>
-              <li data-filter="1">Cityscape</li>
-          </ul>
       </div>
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
