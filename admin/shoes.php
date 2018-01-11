@@ -1,111 +1,137 @@
 <?php
 $pageTitle = "Sko";
 include $_SERVER["DOCUMENT_ROOT"]."/incl/admin-header.inc.php";
+include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
+
 ?>
 
 <?php if (!empty($_SESSION)) : ?>
-
+   <?php
+        $sql = "SELECT * FROM collection";
+        $result = $dbConnect->query($sql);
+        $sql2 = "SELECT * FROM gender";
+        $result2 = $dbConnect->query($sql2);
+        $sql3 = "SELECT * FROM size";
+        $result3 = $dbConnect->query($sql3);
+        $sql4 = "SELECT * FROM brand";
+        $result4 = $dbConnect->query($sql4);
+        $sql5 = "SELECT * FROM type";
+        $result5 = $dbConnect->query($sql5);
+        $sql6 = "SELECT * FROM model";
+        $result6 = $dbConnect->query($sql6);
+ ?>
+   
     <section class="container">
         <div class="form-wrapper">
-            <h1>nyt produkt</h1>
-            <form action="/includes/uploadproduct.inc.php" method="POST" enctype="multipart/form-data">
+            <h1>Nyt produkt</h1>
+            <form action="../incl/uploadShoe.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="name">Navn</label>
                     <input class="form-control" type="text" name="name" placeholder="Sko navn">
                 </div>
                 <div class="form-group">
                     <label for="link">Beskrivelse</label>
-                    <textarea class="form-control" name="desc" cols="52" rows="4" placeholder="Beskrivelse her..."></textarea>
+                    <textarea class="form-control" name="description" cols="52" rows="4" placeholder="Beskrivelse her..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="imgFile">Upload image</label>
+                    <input type="file" name="UploadImage" class="form-control-file" id="imgFile">
                 </div>
                 <div class="form-group input_fields_wrap">
                     <label>Farve(r)</label><br>
-                    <input type="text">
-	                <input type="color" name="colorhex" id="cpButton" value="#ccc1d9" />
+                    <input type="text" name="colorname" value="Sort">
+                    <input type="text" name="hex" value="#000000" id="hex">
 	                <button type="button" class="add_color_button">Tilføj farve</button>
                 </div>
-                <button class="btn btn-primary" type="submit" name="submit">Opret</button>
+                <div class="form-group">
+                   <label>Type</label>
+                   <select name="type">
+                   <?php while ($row = $result5->fetch_assoc()) : ?>
+                       <option value="<?=$row['name']?>"><?=$row['name']?></option>
+                    <?php endwhile; ?>
+                    </select>
+               </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <select name="gender">
+                      <?php while ($row = $result2->fetch_assoc()) : ?>
+                       <option value="<?=$row['gender']?>"><?=$row['gender']?></option>
+                       <?php endwhile; ?>
+                    </select>
+               </div>
+               <div class="form-group">
+                    <label>Model</label>
+                    <select name="model">
+                      <?php while ($row = $result6->fetch_assoc()) : ?>
+                       <option value="<?=$row['name']?>"><?=$row['name']?></option>
+                       <?php endwhile; ?>
+                    </select>
+               </div>
+               <div class="form-group">
+                   <label>Kollection</label>
+                   <select name="collection">
+                      <?php while ($row = $result->fetch_assoc()) : ?>
+                       <option value="<?=$row['name']?>"><?=$row['name']?></option>
+                       <?php endwhile; ?>
+                   </select>
+               </div>
+               <div class="form-group">
+                   <label>Size</label>
+                   <select name="size">
+                   <?php while ($row = $result3->fetch_assoc()) : ?>
+                       <option value="<?=$row['size']?>"><?=$row['size']?></option>
+                    <?php endwhile; ?>
+                    </select>
+               </div>
+               <div class="form-group">
+                   <label>Mærke</label>
+                   <select name="brand">
+                   <option></option>
+                   <?php while ($row = $result4->fetch_assoc()) : ?>
+                       <option value="<?=$row['name']?>"><?=$row['name']?></option>
+                    <?php endwhile; ?>
+                    </select>
+               </div>
+               <button class="btn btn-primary" type="submit" name="submit">Opret</button>
             </form>
         </div>
-
-
-        <div class="form-wrapper">
-            <div class="container">
-                <div id="table" class="table-editable">
-                    <span class="table-add glyphicon glyphicon-plus"></span>
-                    <table class="table">
+        
+        <div class="container">
+            <table class="table table-striped">
                         <?php
-                        $sql = "SELECT * FROM shoes ORDER BY id ASC";
+                        $sql = "SELECT * FROM shoes ORDER BY id DESC";
                         $result = $dbConnect->query($sql);
                         ?>
                         <tr>
                             <th>No.</th>
                             <th>Navn</th>
-                            <th>Antal</th>
-                            <th>Pris</th>
-                            <th>Kategori</th>
+                            <th>Bskrivelse</th>
+                            <th>Farve</th>
+                            <th></th>
                             <th></th>
                         </tr>
                         <?php while ($row = $result->fetch_assoc()) : ?>
                             <tr>
-                                <td><?= $row['product_no'] ?></td>
-                                <td><?= $row['product_title'] ?></td>
-                                <td><?= $row['product_units'] ?></td>
-                                <td><?= $row['product_price'] ?></td>
-                                <?php if ($row['product_category'] == 1) : ?>
-                                    <td>Tømrer</td>
-                                <?php elseif ($row['product_category'] == 2) : ?>
-                                    <td>Elektriker</td>
-                                <?php elseif ($row['product_category'] == 3) : ?>
-                                    <td>VVS</td>
-                                <?php elseif ($row['product_category'] == 4) : ?>
-                                    <td>Murer</td>
-                                <?php elseif ($row['product_category'] == 5) : ?>
-                                    <td>Diverse</td>
-                                <?php endif; ?>
+                                <td><?= $row['id'] ?></td>
+                                <td><?= $row['name'] ?></td>
+                                <td><?= $row['description'] ?></td>
+                                <td><?= $row['colorname'] ?></td>
                                 <td>
-                                    <form style="display: inline-block" action="edit/product.php" method="POST">
-                                        <input type="hidden" name="id" value="<?= $row['product_id'] ?>">
-                                        <button type="submit" name="submit"><i class="fa fa-pencil"
-                                                                               style="font-size:15px;"
-                                                                               aria-hidden="true"></i></button>
+                                    <form style="display: inline-block" action="edit/shoe.php" method="POST">
+                                        <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                        <button type="submit" name="submit">Rediger</button>
                                     </form>
-                                        <a href="products.php?delete=<?=$row['product_id']?>" data-toggle="modal" data-target="#<?=$row['product_id']?>"><i class="fa fa-times"
-                                                                               style="font-size:15px;"
-                                                                               aria-hidden="true"></i></a> 
+                                    <form style="display: inline-block" action="../incl/deleteproduct.php" method="POST">
+                                        <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                        <button type="submit" name="submit">Slet</button>
+                                    </form>
                                 </td>
                             </tr>
-                            <div id="<?=$row['product_id']?>" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Bekræftelse</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <h4>Er du sikker på at du vil slette dette produkt?</h4>
-                        <p>Produktnummer: <?=$row['product_no']?></p>
-                        <p>Produktnavn: <?=$row['product_title']?></p>
-                        <br>
-                        <form action="/includes/deleteproduct.inc.php" method="POST">
-                            <input type="hidden" name="id" value="<?=$row['product_id']?>">
-                            <button class="btn-primary" type="submit" name="submit">Jeg er sikker</button>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                            <button class="btn-danger" data-toggle="modal" data-target="#<?=$row['product_id']?>">LUK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
                         <?php endwhile; ?>
                     </table>
-                </div>
-            </div>
         </div>
-    </section>
 
-    <?php $dbConnect->close(); ?>
+        
 
 <?php elseif (empty($_SESSION)) : ?>
     <?= header("Location: ../login.php") ?>
