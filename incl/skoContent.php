@@ -13,6 +13,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
       <span>Størrelse</span>
     </div>
     <center>
+
          <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="">
@@ -184,7 +185,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
             $result = $dbConnect->query($sql);
             ?>
             <?php while ($row = $result->fetch_assoc()) : ?>
-                <div class="filtr-item col-md-3" data-category="1" data-sort="value">
+                <div class="filtr-item col-md-3" data-category="1" data-str="<?=$row['size']?>" data-sort="value">
                        <figure><img class="img-responsive col" src="<?=$row['imgPath']?>"></figure>
                        <h4 style="margin-top:15px;"><?=$row['name']?></h4>
                        <p><?=$row['description']?></p>

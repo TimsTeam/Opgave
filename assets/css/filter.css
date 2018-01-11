@@ -33,7 +33,6 @@
     cursor: pointer;
     display: inline-block;
     text-transform: uppercase;
-    padding: 1rem 2rem;
 }
 .simplefilter li {
     background-color: #585858;
@@ -43,6 +42,9 @@
 }
 .multifilter li {
     background-color: #4b9eff;
+}
+.multifilter {
+    padding: 0;
 }
 .multifilter li.active {
     background-color: #2265b4;
