@@ -1,21 +1,48 @@
-<section class="row skoFix">
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
 
+
+?>
+  <section class="row skoFix">
   <!-- Venstre side (filter) -->
-  <div class="col-xl-2 skoBox center">
-    <br />
+  <div class="col-xl-2 skoBox">
+  <br>
     <!-- Størrelse -->
 
     <div class="skoBox2">
       <span>Størrelse</span>
     </div>
+    <center>
+
+         <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          37
+        </label>
+      </div>
+         <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          38
+        </label>
+      </div>
+         <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          39
+        </label>
+      </div>
+         <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          40
+        </label>
+      </div>
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="">
           41
         </label>
-          <ul class="simplefilter">
-              <li class="active" data-filter="all">All</li>
-              <li data-filter="1">Cityscape</li>
       </div>
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
@@ -23,7 +50,6 @@
           42
         </label>
       </div>
-      <br />
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="">
@@ -36,7 +62,6 @@
           44
         </label>
       </div>
-      <br />
       <div class="form-check-inline" class="strFix">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="">
@@ -49,7 +74,19 @@
           46
         </label>
       </div>
-      <br />
+       <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          47
+        </label>
+      </div>
+       <div class="form-check-inline" class="strFix">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          48
+        </label>
+      </div>
+
 
       <!-- Farve -->
       <div class="skoBox2">
@@ -93,7 +130,6 @@
           Sandaler
         </label>
       </div>
-      <br />
 
       <!-- Mærker -->
       <div class="skoBox2">
@@ -137,9 +173,29 @@
           Ecco
         </label>
       </div>
+    </center>
   </div>
   <div class="col-xl-9">
-    test
+    <div>
+        <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
+        attribute, which starts from the value 1 and goes up from there -->
+        <div class="filtr-container">
+            <?php
+            $sql = "SELECT * FROM shoes ORDER BY id DESC";
+            $result = $dbConnect->query($sql);
+            ?>
+            <?php while ($row = $result->fetch_assoc()) : ?>
+                <div class="filtr-item col-md-3" data-category="1" data-str="<?=$row['size']?>" data-sort="value">
+                       <figure><img class="img-responsive col" src="<?=$row['imgPath']?>"></figure>
+                       <h4 style="margin-top:15px;"><?=$row['name']?></h4>
+                       <p><?=$row['description']?></p>
+                       Farve: <div class="colorBlock" style="background:<?=$row['colorhex']?>;"></div>
+                       <div class="size">Str. <?=$row['size']?></div><br><br>
+                       <div class="btn btn-primary">Læs mere</div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
   </div>
 </section>
 
@@ -172,72 +228,10 @@
         </ul>
     </div>
 
-    <!-- Shuffle & Sort Controls -->
-    <div class="row">
-        <ul class="sortandshuffle">
-            Sort &amp; Shuffle controls:
-            <!-- Basic shuffle control -->
-            <li class="shuffle-btn" data-shuffle>Shuffle</li>
-            <!-- Basic sort controls consisting of asc/desc button and a select -->
-            <li class="sort-btn active" data-sortAsc>Asc</li>
-            <li class="sort-btn" data-sortDesc>Desc</li>
-            <select data-sortOrder>
-                <option value="domIndex">
-                    Position
-                </option>
-                <option value="sortData">
-                    Description
-                </option>
-            </select>
-        </ul>
-    </div>
-
     <!-- Search control -->
     <div class="row search-row">
         Search control:
         <input type="text" class="filtr-search" name="filtr-search" data-search>
     </div>
 
-    <div>
-        <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
-        attribute, which starts from the value 1 and goes up from there -->
-        <div class="filtr-container">
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="Busy streets">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">Busy Streets</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 5" data-sort="Luminous night">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">Luminous night</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">city wonders</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="In production">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">in production</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 4" data-sort="Industrial site">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">industrial site</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Peaceful lake">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">peaceful lake</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="City lights">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">city lights</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Dreamhouse">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">dreamhouse</span>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="Restless machines">
-                <img class="img-responsive" src="assets/img/vans.jpg" alt="sample image">
-                <span class="item-desc">restless machines</span>
-            </div>
-        </div>
-    </div>
 </div>

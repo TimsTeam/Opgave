@@ -96,7 +96,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
             </form>
             </div>
             <div class="col-6">
-            <table class="table table-striped">
+            <table class="table table-striped table-hover">
                         <?php
                         $sql = "SELECT * FROM shoes ORDER BY id DESC";
                         $result = $dbConnect->query($sql);
@@ -120,7 +120,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
                                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
                                         <button type="submit" name="submit">Rediger</button>
                                     </form>
-                                    <form style="display: inline-block" action="../incl/deleteproduct.php" method="POST">
+                                    <form style="display: inline-block" action="../incl/deleteShoe.php" method="POST">
                                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
                                         <button type="submit" name="submit">Slet</button>
                                     </form>

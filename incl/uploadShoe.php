@@ -59,7 +59,7 @@ if(isset($_POST['submit'])) {
                     echo "Filen er for stor";
                 }
             } else {
-                echo "Fejl i uploading af fil: " . $_FILES["file"]["error"];
+                echo "Fejl i uploading af fil: " . $_FILES["UploadImage"]["error"];
             }
         } else {
             echo "Du kan ikke uploade denne type filer";

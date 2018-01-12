@@ -55,7 +55,6 @@ footer p {
 .center {
   text-align: center;
 }
-
 .skoFix {
   margin-top: 100px;
 }
@@ -124,3 +123,18 @@ footer p {
 .mrkFix label {
   display: block;
 }
+
+.colorBlock {
+    width:10px;
+    height:10px;
+    display:inline-block;
+}
+
+.size {
+    display: inline-block;
+    float: right;
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 06ae2e608dd9e5a556e255409b31771bcb40701d

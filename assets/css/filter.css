@@ -1,6 +1,18 @@
 
-.filtr-item {
-    padding: 1rem;
+.filtr-item figure {
+    height: 150px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.filtr-item img {
+    width: auto;
+    padding: 0;
+}
+.filtr-item p {
+    height: 3.5rem;
+    overflow: hidden;
+    font-size: smaller;
 }
 .item-desc {
     background-color: rgba(0,0,0,0.5);
@@ -21,7 +33,6 @@
     cursor: pointer;
     display: inline-block;
     text-transform: uppercase;
-    padding: 1rem 2rem;
 }
 .simplefilter li {
     background-color: #585858;
@@ -31,6 +42,9 @@
 }
 .multifilter li {
     background-color: #4b9eff;
+}
+.multifilter {
+    padding: 0;
 }
 .multifilter li.active {
     background-color: #2265b4;
@@ -58,4 +72,10 @@ select {
 .filtr-search {
     padding: 0.5rem;
     text-transform: uppercase;
+}
+
+.sort-btn {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
 }

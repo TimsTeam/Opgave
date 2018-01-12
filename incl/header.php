@@ -1,6 +1,7 @@
     <!DOCTYPE html>
     <html lang="en">
 
+<<<<<<< HEAD
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,6 +17,22 @@
         <meta name="author" content="Timsteam">
         <title>
             <?php $pagetitle ?> | Footsteps</title>
+=======
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="#FFFFFF">
+    <!-- icon in the highest resolution we need it for -->
+    <link rel="icon" href="icon.png">
+    <!-- reuse same icon for Safari -->
+    <link rel="apple-touch-icon" href="ios-icon.png">
+    <!-- multiple icons for IE -->
+    <meta name="msapplication-square310x310logo" content="icon_largetile.png">
+    <meta name="description" content="">
+    <meta name="author" content="Timsteam">
+    <title><?php $pagetitle ?>Footsteps</title>
+>>>>>>> 6d5c275b793538e203ad35f259917ec5b8f29a65
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -38,6 +55,7 @@
                 <div class="bar3"></div>
             </button>
 
+<<<<<<< HEAD
             <div class="collapse navbar-collapse navbarcenter" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
@@ -61,3 +79,22 @@
                 </div>
             </div>
         </nav>
+=======
+        <div class="collapse navbar-collapse navbarcenter" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Dame</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">Herre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sko.php">Mærker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.php">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+>>>>>>> 6d5c275b793538e203ad35f259917ec5b8f29a65

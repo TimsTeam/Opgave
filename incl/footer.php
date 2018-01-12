@@ -78,6 +78,7 @@ if($stmt->execute()){
 
 <!-- Ajax -->
 <script>
+<<<<<<< HEAD
     $("#searchInput").keyup(function(){
         var inputText = $(this).val();
         if(inputText != ""){
@@ -94,6 +95,9 @@ if($stmt->execute()){
             $("#searchResults").html("");
         }
     });
+=======
+
+>>>>>>> 6d5c275b793538e203ad35f259917ec5b8f29a65
 </script>
 </body>
 

@@ -39,8 +39,8 @@ $result6 = $dbConnect->query($sql6);
         </div>
         <div class="form-group">
             <label for="imgFile">Upload image</label>
-            <input type="file" name="UploadImage" class="form-control-file" id="imgFile"><br>
-            <div class="d-block">Nyeste billede</div>
+            <input type="file" name="newimageupload" class="form-control-file" id="imgFile"><br>
+            <div class="d-block">Nuværende billede</div>
             <img src="../../<?= $row['imgPath'] ?>" class="col-3">
         </div>
         <div class="form-group">
@@ -52,8 +52,12 @@ $result6 = $dbConnect->query($sql6);
            </select>
         </div>
         <div class="form-group">
-            <label for="units">Mængde</label>
-            <input class="form-control" type="text" name="units" value="<?= $row['product_units'] ?>">
+            <label for="units">Type</label>
+            <select name="type">
+                <?php while ($row = $result5->fetch_assoc()) : ?>
+                <option value="<?=$row['name']?>"><?=$row['name']?></option>
+                <?php endwhile; ?>
+            </select>
         </div>
         <div class="form-group">
             <label>Model</label>
