@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/master.css">
     <link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,600" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/filter.css">
 </head>
 
 <body class="container">

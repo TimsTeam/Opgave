@@ -44,6 +44,7 @@ if($stmt->execute()){
     crossorigin="anonymous"></script>
 <script src="assets/js/jquery-filterizr.js"></script>
 <script src="assets/js/controls.js"></script>
+<script src="assets/js/hide.js"></script>
 
 <!-- Kick off Filterizr -->
 <script type="text/javascript">
