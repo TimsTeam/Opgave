@@ -75,8 +75,25 @@ if($stmt->execute()){
         x.classList.toggle("change");
     }
 </script>
+
+<!-- Ajax -->
 <script>
-    
+    $("#searchInput").keyup(function(){
+        var inputText = $(this).val();
+        if(inputText != ""){
+            $.ajax({
+                url: "incl/liveSearch.php",
+                method: "post",
+                data:{search:inputText},
+                dataType:"text",
+                success:function(data){
+                    $("#searchResults").html(data);
+                }
+            })
+        } else {
+            $("#searchResults").html("");
+        }
+    });
 </script>
 </body>
 
