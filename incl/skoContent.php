@@ -1,4 +1,4 @@
-<?php 
+<?php
 include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
 
 
@@ -130,7 +130,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/incl/dbInfo.php";
           Sandaler
         </label>
       </div>
-      
+
       <!-- Mærker -->
       <div class="skoBox2">
         <span>Mærker</span>
