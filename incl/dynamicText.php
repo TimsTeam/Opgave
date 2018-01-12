@@ -11,7 +11,7 @@ if($stmt->execute()){
     $stmt->bind_result($adress, $phone, $email);
     $stmt->fetch();
 } else {
-    // Fail
+    echo "Fail in show text";
 }
 
 if(isset($_POST['updateText'])){
@@ -42,7 +42,7 @@ if(isset($_POST['updateText'])){
     if($stmt2->execute() && $stmt3->execute() && $stmt4->execute()){
 
     } else {
-        //Failure
+        echo "Fail in update text";
     }
 }
 
